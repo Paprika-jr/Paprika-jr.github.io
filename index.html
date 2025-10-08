@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viitasaaren Muusikot - Paikallinen musiikkiyhteisö</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🎵</div>
+                    <div>
+                        <h1 id="mainTitle">Viitasaaren Muusikot</h1>
+                        <p class="subtitle" id="mainSubtitle">Paikallinen musiikkiyhteisö</p>
+                    </div>
+                </div>
+                <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showSection('events')" id="navEvents">Tapahtumat</button>
+                <button class="nav-btn" onclick="showSection('bands')" id="navBands">Bändit</button>
+                <button class="nav-btn" onclick="showSection('join')" id="navJoin">Liity mukaan</button>
+                <button class="nav-btn" onclick="showSection('contact')" id="navContact">Yhteystiedot</button>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <!-- Events Section -->
+            <section id="events" class="section active">
+                <div class="section-header">
+                    <h2 id="eventsTitle">Tulevat Tapahtumat</h2>
+                    <p id="eventsSubtitle">Liity mukaan musiikillisiin tapahtumiin Viitasaarella</p>
+                </div>
+                <div class="grid grid-3" id="eventsGrid"></div>
+            </section>
+            
+            <!-- Bands Section -->
+            <section id="bands" class="section">
+                <div class="section-header">
+                    <h2 id="bandsTitle">Paikalliset Bändit</h2>
+                    <p id="bandsSubtitle">Etsi bändi tai liity mukaan</p>
+                </div>
+                <div class="grid grid-2" id="bandsGrid"></div>
+            </section>
+            
+            <!-- Join Section -->
+            <section id="join" class="section">
+                <div class="section-header">
+                    <h2 id="joinTitle">Liity Mukaan</h2>
+                    <p id="joinSubtitle">Tule osaksi Viitasaaren musiikkiyhteisöä</p>
+                </div>
+                <div class="grid grid-2" id="joinGrid"></div>
+                <div class="card cta-card">
+                    <h3 id="joinCTATitle">Kuinka liittyä?</h3>
+                    <p id="joinCTAText" style="margin: 20px 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Tule käymään seuraavassa tapahtumassa tai ota yhteyttä! Ei jäsenmaksuja, ei sitoutumista - vain musiikkirakkautta ja yhteisöllisyyttä.
+                    </p>
+                    <button class="btn" id="joinCTABtn">Ota Yhteyttä</button>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="section-header">
+                    <h2 id="contactTitle">Yhteystiedot</h2>
+                    <p id="contactSubtitle">Olemme täällä auttamassa</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="card">
+                        <div class="info-item">
+                            <span>📧</span>
+                            <div>
+                                <div class="info-label" id="contactEmail">Sähköposti</div>
+                                <div>info@viitasaarenmuusikot.fi</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span>📞</span>
+                            <div>
+                                <div class="info-label" id="contactPhone">Puhelin</div>
+                                <div>+358 40 123 4567</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span>📍</span>
+                            <div>
+                                <div class="info-label" id="contactLocation">Tapaamispaikka</div>
+                                <div>Viitasaaren Kulttuuritalo<br>Keskuskatu 4, 85100 Viitasaari</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span>🕐</span>
+                            <div>
+                                <div class="info-label" id="contactHours">Aukioloajat</div>
+                                <div id="contactHoursText">Torstaisin 18:00-21:00<br>Muut ajat sopimuksen mukaan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top: 20px; text-align: center;">
+                        <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;" id="contactSocial">
+                            Seuraa meitä sosiaalisessa mediassa!
+                        </p>
+                        <p>Facebook: Viitasaaren Muusikot</p>
+                        <p>Instagram: @viitasaarenmuusikot</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p id="footerCopyright">© 2025 Viitasaaren Muusikot. Kaikki oikeudet pidätetään.</p>
+            <p id="footerTagline">Tuodaan muusikot yhteen Viitasaarella</p>
+        </div>
+    </footer>
+    
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
